@@ -44,7 +44,7 @@ function respuestaIncorrecta(){
 // FORMULARIO
 // ==============================
 
-function validarFormulario(event){
+function validarFormulario (event){
 
     event.preventDefault();
 
