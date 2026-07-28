@@ -1,77 +1,139 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+/* ====== Estilos generales ====== */
+
+*{
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Encabezado */
-header {
-    background-color: #2c3e50;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ====== Encabezado ====== */
+
+header{
+    background: #2E8B57;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
-/* Menú */
-nav {
-    margin-top: 10px;
+header h1{
+    margin-bottom: 15px;
 }
 
-nav a {
-    color: white;
+/* ====== Menú ====== */
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a{
     text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+    color: white;
+    background: #1f6f46;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: .3s;
 }
 
-nav a:hover {
-    color: #f1c40f;
+nav a:hover{
+    background: #14532d;
 }
 
-/* Contenido principal */
-main {
-    width: 80%;
-    margin: 20px auto;
+/* ====== Contenido ====== */
+
+main{
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
-/* Secciones */
-section {
-    background-color: white;
-    margin-bottom: 20px;
+section{
+    background: white;
+    margin-bottom: 25px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
 
-/* Títulos */
-h1, h2 {
-    margin-top: 0;
+section h2{
+    color: #2E8B57;
+    margin-bottom: 10px;
 }
 
-/* Imagen */
-img {
+section p{
+    text-align: justify;
+}
+
+/* ====== Imágenes ====== */
+
+img{
     display: block;
-    margin: 15px auto;
-    max-width: 100%;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
-/* Lista */
-ul {
-    padding-left: 20px;
+/* ====== Formularios ====== */
+
+form{
+    display: flex;
+    flex-direction: column;
 }
 
-li {
-    margin-bottom: 8px;
+input,
+textarea{
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 6px;
 }
 
-/* Pie de página */
-footer {
-    background-color: #2c3e50;
+button{
+    background: #2E8B57;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background: #1f6f46;
+}
+
+/* ====== Pie de página ====== */
+
+footer{
+    background: #2E8B57;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+/* ====== Responsive ====== */
+
+@media (max-width:768px){
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main{
+        width:95%;
+    }
+
 }

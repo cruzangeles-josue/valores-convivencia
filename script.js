@@ -1,32 +1,65 @@
-// Mensaje al cargar la página
-alert("¡Bienvenido a mi sitio web!");
+// ==============================
+// BUSCADOR DE VALORES
+// ==============================
 
-// Mostrar mensaje al presionar un botón
-function saludar() {
-    alert("Hola, gracias por visitar mi página.");
+function buscarValor() {
+
+    let entrada = document.getElementById("buscador").value.toLowerCase();
+
+    let secciones = document.querySelectorAll("section");
+
+    secciones.forEach(function(seccion){
+
+        if(seccion.textContent.toLowerCase().includes(entrada)){
+            seccion.style.display = "block";
+        }else{
+            seccion.style.display = "none";
+        }
+
+    });
+
 }
 
-// Cambiar el título principal
-function cambiarTitulo() {
-    document.getElementById("titulo").innerHTML = "¡Título Modificado con JavaScript!";
+
+// ==============================
+// QUIZ
+// ==============================
+
+function respuestaCorrecta(){
+
+    document.getElementById("resultado").innerHTML =
+    "✅ ¡Correcto! El respeto es un valor fundamental.";
+
 }
 
-// Cambiar el color del fondo
-function cambiarColor() {
-    document.body.style.backgroundColor = "lightblue";
+function respuestaIncorrecta(){
+
+    document.getElementById("resultado").innerHTML =
+    "❌ Incorrecto. Esa opción no representa un valor.";
+
 }
 
-// Mostrar la fecha y hora actual
-function mostrarFecha() {
-    const fecha = new Date();
-    document.getElementById("fecha").innerHTML = fecha;
-}
 
-// Contador de clics
-let contador = 0;
+// ==============================
+// FORMULARIO
+// ==============================
 
-function contarClic() {
-    contador++;
-    document.getElementById("contador").innerHTML =
-        "Has hecho clic " + contador + " veces.";
+function validarFormulario(event){
+
+    event.preventDefault();
+
+    let nombre = document.getElementById("nombre").value;
+    let correo = document.getElementById("correo").value;
+    let mensaje = document.getElementById("mensaje").value;
+
+    if(nombre=="" || correo=="" || mensaje==""){
+
+        alert("Complete todos los campos.");
+
+        return;
+
+    }
+
+    alert("Formulario enviado correctamente.");
+
 }
